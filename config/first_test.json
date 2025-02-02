@@ -1,8 +1,8 @@
 {
-    "Moves": "1.e4 e5 2.Nf3 Nc6",
+    "Moves": "1.e4 e5 2.Nf3 Nc6 3.Bb5 a6 4.Ba4 Nf6",
     "Side": "w",
     "Depth": 10,
     "MaxSubVariations": 3,
     "EvalLimit": 250
-  }
+}
   

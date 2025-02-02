@@ -30,7 +30,11 @@ class RedisDB:
     def get_position(self, fen):
         """Retrieve position from Redis"""
         key = f"pos:{fen}"
-        return self.r.hgetall(key)
+        result = self.r.hgetall(key)
+        if not result:
+            logging.info(f"Position {key} not found")
+            raise KeyError(f"Key '{key}' not found in Redis")
+        return result
 
     def save(self):
         """Save the Redis database"""
